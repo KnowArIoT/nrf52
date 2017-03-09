@@ -2,11 +2,11 @@ PROJECT_NAME     := ariot
 TARGETS          := nrf52832_xxaa
 OUTPUT_DIRECTORY := build
 
-SDK_ROOT := /home/thomas/dev/nRF51_SDK_12
+include config/Makefile.local
 PROJ_DIR := .
 
 $(OUTPUT_DIRECTORY)/nrf52832_xxaa.out: \
-  LINKER_SCRIPT  := blinky_gcc_nrf52.ld
+  LINKER_SCRIPT  := ariot_gcc_nrf52.ld
 
 # Source files common to all targets
 SRC_FILES += \
